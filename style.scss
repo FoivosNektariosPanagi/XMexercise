@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  display: flex;
+  justify-content: center;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.app {
+  display: grid;
+
+  grid-template-rows: 113px 617px 1110px 375px 643px 257px;
+
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+  grid-row: 1 / 2;
+
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 29px;
+}
+
+.nav {
+  margin-left: auto;
+
+  &__list {
+    display: flex;
+    gap: 46px;
+    margin-right: 54px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    text-decoration: none; /* Remove underline from links */
+    font: inherit;
+    color: white;
+    font-weight: 400;
+    size: 15px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.heroSection {
+  grid-row: 2 / 3;
+  background: linear-gradient(
+      180deg,
+      rgba(32, 46, 71, 0.65) 18.3%,
+      rgba(32, 46, 71, 0.62) 39.45%,
+      rgba(32, 46, 71, 0.58) 60.61%,
+      rgba(32, 46, 71, 0) 81.77%
+    ),
+    #201d27;
+  mix-blend-mode: multiply; /* Ensure blending is visible */
+
+  padding-top: 128px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  color: #ffffff;
+
+  h1 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 42px;
+  }
+
+  h2 {
+    color: #ddd;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 42px;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.cryptosAndWhyTradeSection {
+  grid-row: 3 / 4;
+  background-color: #201d27;
+}
+
+.eventGallerySection {
+  grid-row: 4 / 5;
+
+  background-color: blueviolet;
+}
+.bigFairHuman {
+  grid-row: 5 / 6;
+
+  background-color: bisque;
+}
+.footer {
+  grid-row: 6 / 7;
+
+  background-color: black;
+}
+
+.fontWeight700 {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .logo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
