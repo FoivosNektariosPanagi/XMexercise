@@ -11,7 +11,7 @@ $XMWhite: #fff;
 .page {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-
+  color: $XMWhite;
   display: flex;
   justify-content: center;
 
@@ -52,6 +52,7 @@ $XMWhite: #fff;
     display: flex;
     gap: 46px;
     margin-right: 54px;
+    list-style: none; /* Remove bullet points */
   }
 
   &__item {
@@ -101,10 +102,6 @@ $XMWhite: #fff;
     font-size: 35px;
     font-weight: 400;
     line-height: 42px;
-
-    .highlight {
-      font-weight: 700;
-    }
   }
 
   h2 {
@@ -127,10 +124,6 @@ $XMWhite: #fff;
     font-weight: 400;
     line-height: 24px;
     text-align: center; /* Center text content */
-
-    &__highlight {
-      font-weight: 700;
-    }
   }
 
   .openAcountbutton {
@@ -176,8 +169,9 @@ $XMWhite: #fff;
     font-weight: 400;
     line-height: normal;
     margin-bottom: 163px;
-    &__highlight {
+    &__highlightRed {
       color: #d51820;
+      text-decoration: none; /* Remove underline from links */
     }
   }
 }
@@ -306,10 +300,6 @@ $XMWhite: #fff;
       font-style: normal;
       font-weight: 300;
       line-height: 42.62px;
-
-      .highlight {
-        font-weight: 700;
-      }
     }
     .divider {
       width: 70px;
@@ -319,8 +309,6 @@ $XMWhite: #fff;
       margin-bottom: 25px;
     }
     p {
-      //   width: 641px;
-
       color: $XMWhite;
       flex-direction: column;
       justify-content: center;
@@ -331,9 +319,6 @@ $XMWhite: #fff;
       font-style: normal;
       font-weight: 400;
       line-height: 22px; /* 157.143% */
-      .highlight {
-        font-weight: 700;
-      }
     }
   }
   &__grid {
@@ -344,27 +329,105 @@ $XMWhite: #fff;
     grid-template-columns: 320px 320px 320px;
     grid-template-rows: 285px 285px;
     .box {
-      background-color: #444;
-      border-radius: 5px;
-      padding: 20px;
-      font-size: 150%;
+      border-radius: 10px;
+      background: #0b0819;
+      backdrop-filter: blur(45px);
+      display: flex;
+      flex-direction: column;
+      padding-left: 52px;
+      padding-top: 57px;
+      h1 {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px; /* 120% */
+      }
+
+      .divider {
+        min-height: 2px;
+        width: 50px;
+        background: $brandColourPrimaryGreen;
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
     }
 
     .a {
+      position: relative;
       grid-column: 1 / 1;
       grid-row: 1/3;
+      h1 {
+        width: 225px;
+      }
+      p {
+        width: 225px;
+        margin-bottom: 104px;
+      }
+      img {
+        width: 100px;
+        height: 212.121px;
+        position: absolute;
+        left: 42px; /* Position the image bottom left */
+        bottom: 25.88px;
+      }
     }
     .b {
+      position: relative;
       grid-column: 2/4;
       grid-row: 1 / 2;
+      h1 {
+        width: 190px;
+      }
+      p {
+        width: 405px;
+        height: 40px;
+      }
+      img {
+        width: 98px;
+        height: 95.846px;
+        position: absolute;
+        top: 28px; /* Position the image at the top right */
+        right: 26px;
+      }
     }
     .c {
+      position: relative;
       grid-column: 2/3;
       grid-row: 2/3;
+      h1 {
+        width: 161px;
+      }
+      p {
+        width: 225px;
+        height: 61px;
+      }
+      img {
+        width: 72.318px;
+        height: 74px;
+        position: absolute;
+        top: 28px; /* Position the image at the top right */
+        right: 28.68px;
+      }
     }
     .d {
+      position: relative;
       grid-column: 3/4;
       grid-row: 2/3;
+      padding-top: 74px;
+
+      h1 {
+        width: 162px;
+      }
+      p {
+        width: 225px;
+      }
+      img {
+        width: 48.628px;
+        height: 75.056px;
+        position: absolute;
+        top: 28px; /* Position the image at the top right */
+        right: 25.5px;
+      }
     }
   }
 }
@@ -382,6 +445,10 @@ $XMWhite: #fff;
   grid-row: 6 / 7;
 
   background-color: black;
+}
+
+.highlight {
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -404,22 +471,60 @@ $XMWhite: #fff;
     grid-template-columns: 530px;
     grid-template-rows: 230px 230px 230px 230px;
     margin-bottom: 75px;
+    .box {
+      p {
+        width: 305px;
+        height: 40px;
+      }
+    }
 
     .a {
       grid-column: 1 / 2;
       grid-row: 1/2;
+      padding-top: 40px;
+
+      h1 {
+        width: 175px;
+      }
+
+      img {
+        width: 41.463px;
+        height: 87.953px;
+        top: 28px; /* Position the image at the top right */
+        right: 44px;
+        left: auto;
+        bottom: auto;
+      }
     }
     .b {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
+      img {
+        width: 92.556px;
+        height: 90.521px;
+        top: 28px; /* Position the image at the top right */
+        right: 26px;
+      }
     }
     .c {
       grid-column: 1 / 2;
       grid-row: 3/4;
+      img {
+        width: 87.815px;
+        height: 89.857px;
+        top: 27.5px; /* Position the image at the top right */
+        right: 28.5px;
+      }
     }
     .d {
       grid-column: 1 / 2;
       grid-row: 4/5;
+      img {
+        width: 59.048px;
+        height: 91.139px;
+        top: 27px; /* Position the image at the top right */
+        right: 37.5px;
+      }
     }
   }
 }
@@ -444,5 +549,52 @@ $XMWhite: #fff;
     grid-template-columns: 280px;
     grid-template-rows: 235px 235px 235px 235px;
     margin-bottom: 55px;
+
+    .box {
+      padding-left: 30px;
+      padding-top: 42px;
+      .divider {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      p {
+        width: 190px;
+        line-height: 20px;
+      }
+    }
+
+    .a {
+      img {
+        width: 26.829px;
+        height: 56.911px;
+        top: 19.2px; /* Position the image at the top right */
+        right: 27.5px;
+      }
+    }
+    .b {
+      img {
+        width: 59.889px;
+        height: 58.573px;
+        top: 18.78px; /* Position the image at the top right */
+        right: 17.56px;
+      }
+    }
+    .c {
+      img {
+        width: 56.821px;
+        height: 58.143px;
+        top: 18.43px; /* Position the image at the top right */
+        right: 19px;
+      }
+    }
+    .d {
+      padding-top: 55px;
+      img {
+        width: 38.207px;
+        height: 58.972px;
+        top: 18.17px; /* Position the image at the top right */
+        right: 23.24px;
+      }
+    }
   }
 }
