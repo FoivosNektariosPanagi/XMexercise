@@ -25,7 +25,7 @@ $XMWhite: #fff;
 .app {
   display: grid;
 
-  grid-template-rows: 113px 617px 1110px 375px 643px 257px;
+  grid-template-rows: 113px 617px 1fr 375px 643px 257px;
 
   width: 100%;
   margin: 0;
@@ -319,7 +319,7 @@ $XMWhite: #fff;
       margin-bottom: 25px;
     }
     p {
-      width: 641px;
+      //   width: 641px;
 
       color: $XMWhite;
       flex-direction: column;
@@ -395,6 +395,10 @@ $XMWhite: #fff;
     margin-right: auto;
     margin-left: auto;
   }
+
+  .cryptosAndWhyTradeSection__WhyTradeSection {
+    width: 642px;
+  }
   .cryptosAndWhyTradeSection__grid {
     grid-gap: 25px;
     grid-template-columns: 530px;
@@ -423,6 +427,17 @@ $XMWhite: #fff;
 @media (max-width: 320px) {
   .app {
     grid-template-rows: 95px 615px 1fr 275px 1088px 225px;
+  }
+
+  .cryptosAndWhyTradeSection__cryptos__card {
+    width: 236px;
+    height: 144px;
+  }
+  .cryptosAndWhyTradeSection__cryptos {
+    gap: 33px;
+  }
+  .cryptosAndWhyTradeSection__WhyTradeSection {
+    width: 280px;
   }
   .cryptosAndWhyTradeSection__grid {
     grid-gap: 25px;
