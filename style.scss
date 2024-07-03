@@ -1,3 +1,5 @@
+$brandColourPrimaryGreen: #29a643;
+$XMWhite: #fff;
 *,
 *::before,
 *::after {
@@ -58,7 +60,7 @@
   &__link {
     text-decoration: none; /* Remove underline from links */
     font: inherit;
-    color: white;
+    color: $XMWhite;
     font-weight: 400;
     size: 15px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -75,23 +77,34 @@
       rgba(32, 46, 71, 0) 81.77%
     ),
     #201d27;
-  mix-blend-mode: multiply; /* Ensure blending is visible */
-
-  padding-top: 128px;
+  mix-blend-mode: multiply;
 
   text-align: center;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  color: #ffffff;
+  justify-content: center;
+  color: $XMWhite;
+
+  &__content {
+    padding-top: 128px;
+    width: 100%; /* Ensure it takes the full width */
+    max-width: 621px; /* Ensure it doesn't exceed a max width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items within the content */
+    justify-content: center;
+  }
 
   h1 {
-    color: #fff;
+    color: $XMWhite;
     font-size: 35px;
     font-weight: 400;
     line-height: 42px;
+
+    .highlight {
+      font-weight: 700;
+    }
   }
 
   h2 {
@@ -103,19 +116,38 @@
     line-height: 42px;
   }
 
-  p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+  .heroDescription {
+    width: 100%; /* Ensure it takes the full width */
+    max-width: 463px; /* Ensure it doesn't exceed a max width */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: $XMWhite;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center; /* Center text content */
+
+    &__highlight {
+      font-weight: 700;
+    }
   }
 
-  .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #28a745; /* Green background */
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  .openAcountbutton {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 345px;
+    height: 40px;
+    margin-bottom: 30px;
+    background: $brandColourPrimaryGreen;
+    color: $XMWhite;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline */
     transition: background-color 0.3s ease;
 
     &:hover {
@@ -123,12 +155,29 @@
     }
   }
 
-  a {
-    color: #007bff;
-    text-decoration: none;
+  .demoAccount {
+    color: $XMWhite;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+    margin-bottom: 15px;
+    &__link {
+      color: $XMWhite;
+    }
+  }
 
-    &:hover {
-      text-decoration: underline;
+  .termsConditions {
+    color: $XMWhite;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 163px;
+    &__highlight {
+      color: #d51820;
     }
   }
 }
@@ -152,10 +201,6 @@
   grid-row: 6 / 7;
 
   background-color: black;
-}
-
-.fontWeight700 {
-  font-weight: 700;
 }
 
 @media (max-width: 768px) {
