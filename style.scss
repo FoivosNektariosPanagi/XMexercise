@@ -26,7 +26,7 @@ $XMWhite: #fff;
 .app {
   display: grid;
 
-  grid-template-rows: 113px 617px 1fr 375px 643px 257px;
+  grid-template-rows: 113px 1fr 375px 643px 257px;
 
   width: 100%;
   margin: 0;
@@ -65,9 +65,65 @@ $XMWhite: #fff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
-
-.heroSection {
+.main {
   grid-row: 2 / 3;
+  position: relative;
+  overflow: hidden;
+
+  .bagroundImage {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .image-1 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background-image: url(public/images/desktop/general-0-swaps-desktop.png);
+  }
+
+  .image-2 {
+    width: 590.084px;
+    height: 726.848px;
+    top: 759px;
+    left: -250px;
+    background-image: url(public/images/desktop/Gold-Number-02.png);
+  }
+
+  .image-2 {
+    width: 436.715px;
+    height: 881.74px;
+    top: 23px;
+    left: 1000px;
+    background-image: url(public/images/desktop/Intersect-1.png);
+  }
+
+  .image-3 {
+    width: 428.822px;
+    height: 865.805px;
+    top: -400px;
+    left: -300px;
+    background-image: url(public/images/desktop/Intersect.png);
+  }
+
+  .image-4 {
+    width: 1078px;
+    height: 1025px;
+    top: 771px;
+    background-image: url(public/images/desktop/Vector-4.png);
+  }
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
       180deg,
       rgba(32, 46, 71, 0.65) 18.3%,
@@ -77,7 +133,11 @@ $XMWhite: #fff;
     ),
     #201d27;
   mix-blend-mode: multiply;
+  z-index: -2;
+}
 
+.heroSection {
+  position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -175,8 +235,17 @@ $XMWhite: #fff;
 }
 
 .cryptosAndWhyTradeSection {
-  grid-row: 3 / 4;
-  background-color: #201d27;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #201d27; // Solid background color
+    z-index: -2; // Place behind everything else
+  }
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -431,7 +500,7 @@ $XMWhite: #fff;
 }
 
 .eventGallerySection {
-  grid-row: 4 / 5;
+  grid-row: 3 / 4;
   background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
@@ -467,7 +536,7 @@ $XMWhite: #fff;
 }
 
 .bigFairHuman {
-  grid-row: 5 / 6;
+  grid-row: 4 / 5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -567,7 +636,7 @@ $XMWhite: #fff;
   }
 }
 .footer {
-  grid-row: 6 / 7;
+  grid-row: 5 / 6;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -642,7 +711,7 @@ $XMWhite: #fff;
 
 @media (max-width: 768px) {
   .app {
-    grid-template-rows: 94px 500px 1fr 344px 726px 164px;
+    grid-template-rows: 94px 1fr 344px 726px 164px;
   }
   .nav {
     display: none;
@@ -802,11 +871,55 @@ $XMWhite: #fff;
       display: none;
     }
   }
+
+  .main {
+    .image-1 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 650px;
+      background-image: url(public/images/tablet/general-0-swaps-tablet.png);
+    }
+
+    .image-2 {
+      width: 590.084px;
+      height: 726.848px;
+      top: 759px;
+      left: -250px;
+      background-image: url(public/images/tablet/general-0-swaps-tablet.png);
+    }
+
+    .image-2 {
+      width: 377.503px;
+      height: 464.997px;
+      top: 813px;
+      left: -200px;
+      background-image: url(public/images/desktop/Gold-Number-02.png);
+    }
+
+    .image-3 {
+      width: 274.337px;
+      height: 553.893px;
+      top: -100px;
+      left: -100px;
+      background-image: url(public/images/desktop/Intersect.png);
+    }
+
+    .image-4 {
+      width: 671px;
+      height: 1346px;
+      top: 566px;
+      right: 75px;
+      filter: blur(51.17951965332031px);
+
+      background-image: url(public/images/desktop/Vector-4.png);
+    }
+  }
 }
 
 @media (max-width: 320px) {
   .app {
-    grid-template-rows: 95px 615px 1fr 275px 1088px 225px;
+    grid-template-rows: 95px 1fr 275px 1088px 225px;
   }
 
   .cryptosAndWhyTradeSection__cryptos__card {
@@ -955,6 +1068,48 @@ $XMWhite: #fff;
     &__down {
       flex-direction: column;
       gap: 24px;
+    }
+  }
+
+  .main {
+    .image-1 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background-image: url(public/images/mobile/general-0-swaps-mobile.png);
+    }
+
+    .image-2 {
+      width: 590.084px;
+      height: 726.848px;
+      top: 759px;
+      left: -250px;
+      background-image: url(public/images/tablet/Gold-Number-02.png);
+    }
+
+    .image-2 {
+      width: 150.888px;
+      height: 304.648px;
+      top: 380px;
+      left: 300px;
+      background-image: url(public/images/mobile/Intersect-1.png);
+    }
+
+    .image-3 {
+      width: 104.994px;
+      height: 240px;
+      top: 53px;
+      left: -50px;
+      background-image: url(public/images/mobile/Intersect.png);
+    }
+
+    .image-4 {
+      width: 151.453px;
+      height: 161px;
+      top: 650px;
+      left: 300px;
+      background-image: url(public/images/mobile/zero-mobile-bigger-tinted.png);
     }
   }
 }
