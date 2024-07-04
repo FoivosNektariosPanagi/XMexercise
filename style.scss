@@ -564,26 +564,78 @@ $XMWhite: #fff;
             height: 56.465px;
           }
         }
-        .B {
-          img {
-          }
-        }
-        .C {
-          img {
-          }
-        }
-        .D {
-          img {
-          }
-        }
       }
     }
   }
 }
 .footer {
   grid-row: 6 / 7;
-
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &__up {
+    display: flex;
+    justify-content: space-between;
+    .companies {
+      display: flex;
+      align-items: center;
+      gap: 57px;
+    }
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      h3 {
+        color: #888;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 17.143px; /* 142.858% */
+      }
+      i {
+        color: #bdbdbd;
+        font-family: FontAwesome;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20.1px; /* 111.667% */
+      }
+    }
+  }
+  &__devider {
+    height: 0.963px;
+    background: #444;
+    margin-top: 33px;
+    margin-bottom: 29px;
+  }
+  &__down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .policies {
+      display: flex;
+      color: #888;
+      font-family: Roboto;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 17.143px; /* 142.858% */
+      a {
+        text-decoration: none; /* Remove underline from links */
+        color: #888;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 17.143px; /* 142.858% */
+        margin: 0 10px; //left right
+      }
+    }
+  }
 }
 
 .highlight {
@@ -743,6 +795,15 @@ $XMWhite: #fff;
       }
     }
   }
+
+  .footer {
+    &__up {
+      display: none;
+    }
+    &__devider {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 320px) {
@@ -885,6 +946,17 @@ $XMWhite: #fff;
           }
         }
       }
+    }
+  }
+
+  .footer {
+    padding-top: 62px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    &__down {
+      flex-direction: column;
+      gap: 24px;
     }
   }
 }
