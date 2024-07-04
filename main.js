@@ -38,7 +38,7 @@ function createCryptoCard({ symbol, name, price_usd, percent_change_24h }) {
       <div class="cryptosAndWhyTradeSection__cryptos__card">
         <div class="cryptosAndWhyTradeSection__cryptos__card__header">
           <img
-            src="public/images/${symbol}.png"
+            src="public/images/coins/${symbol}.png"
             alt="${symbol}"
             class="crypto-icon"
           />
