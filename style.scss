@@ -53,11 +53,11 @@ $XMWhite: #fff;
     display: flex;
     gap: 46px;
     margin-right: 54px;
-    list-style: none; /* Remove bullet points */
+    list-style: none;
   }
 
   &__link {
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none;
     font: inherit;
     color: $XMWhite;
     font-weight: 400;
@@ -147,11 +147,11 @@ $XMWhite: #fff;
 
   &__content {
     padding-top: 128px;
-    width: 100%; /* Ensure it takes the full width */
-    max-width: 621px; /* Ensure it doesn't exceed a max width */
+    width: 100%;
+    max-width: 621px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align items within the content */
+    align-items: center;
     justify-content: center;
   }
 
@@ -172,8 +172,8 @@ $XMWhite: #fff;
   }
 
   .heroDescription {
-    width: 100%; /* Ensure it takes the full width */
-    max-width: 463px; /* Ensure it doesn't exceed a max width */
+    width: 100%;
+    max-width: 463px;
     padding-top: 30px;
     padding-bottom: 30px;
     color: $XMWhite;
@@ -181,13 +181,13 @@ $XMWhite: #fff;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    text-align: center; /* Center text content */
+    text-align: center;
   }
 
   .openAcountbutton {
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 345px;
     height: 40px;
     margin-bottom: 30px;
@@ -421,7 +421,7 @@ $XMWhite: #fff;
         font-size: 25px;
         font-style: normal;
         font-weight: 700;
-        line-height: 30px; /* 120% */
+        line-height: 30px;
       }
 
       .divider {
@@ -529,7 +529,7 @@ $XMWhite: #fff;
     font-size: 30px;
     font-style: normal;
     font-weight: 800;
-    line-height: 39px; /* 130% */
+    line-height: 39px;
   }
   .carousel {
     display: flex;
@@ -572,7 +572,7 @@ $XMWhite: #fff;
         font-size: 80px;
         font-style: normal;
         font-weight: 900;
-        line-height: 90px; /* 112.5% */
+        line-height: 90px;
         letter-spacing: -1.6px;
         margin-top: 39px;
         margin-bottom: 55px;
@@ -589,7 +589,7 @@ $XMWhite: #fff;
         font-size: 17px;
         font-style: normal;
         font-weight: 400;
-        line-height: 23.879px; /* 140.465% */
+        line-height: 23.879px;
       }
     }
 
@@ -612,7 +612,6 @@ $XMWhite: #fff;
 
       .cart {
         flex: 1 1 45%;
-        // max-width: 45%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -627,7 +626,7 @@ $XMWhite: #fff;
           font-size: 19px;
           font-style: normal;
           font-weight: 700;
-          line-height: 24.845px; /* 130.761% */
+          line-height: 24.845px;
           margin-top: 20px;
           margin-bottom: 20px;
         }
@@ -637,7 +636,7 @@ $XMWhite: #fff;
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
-          line-height: 20.973px; /* 149.805% */
+          line-height: 20.973px;
         }
         .A {
           img {
@@ -675,7 +674,7 @@ $XMWhite: #fff;
         font-family: Roboto;
         font-size: 12px;
         font-weight: 500;
-        line-height: 17.143px; /* 142.858% */
+        line-height: 17.143px;
       }
       i {
         color: #bdbdbd;
@@ -683,7 +682,7 @@ $XMWhite: #fff;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
-        line-height: 20.1px; /* 111.667% */
+        line-height: 20.1px;
       }
     }
   }
@@ -704,7 +703,7 @@ $XMWhite: #fff;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
-      line-height: 17.143px; /* 142.858% */
+      line-height: 17.143px;
       a {
         text-decoration: none; /* Remove underline from links */
         color: #888;
@@ -712,7 +711,7 @@ $XMWhite: #fff;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 17.143px; /* 142.858% */
+        line-height: 17.143px;
         margin: 0 10px; //left right
       }
     }
@@ -737,6 +736,10 @@ $XMWhite: #fff;
 
   .cryptosAndWhyTradeSection__WhyTradeSection {
     width: 642px;
+    margin-bottom: 60px;
+    h1 {
+      font-size: 32px;
+    }
   }
   .cryptosAndWhyTradeSection__grid {
     grid-gap: 25px;
@@ -835,14 +838,14 @@ $XMWhite: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; /* Added align-items: center */
+        align-items: center;
         margin-bottom: 53px;
         h1 {
           width: 100%;
           color: #444;
           text-align: center;
           font-size: 41.881px;
-          line-height: 48.265px; /* 115.242% */
+          line-height: 48.265px;
           letter-spacing: -0.838px;
           margin-top: 25px;
           margin-bottom: 24px;
@@ -865,12 +868,12 @@ $XMWhite: #fff;
         .cart {
           h1 {
             font-size: 19.773px;
-            line-height: 23.393px; /* 118.308% */
+            line-height: 23.393px;
           }
 
           p {
             font-size: 14px;
-            line-height: 19.748px; /* 141.055% */
+            line-height: 19.748px;
           }
         }
       }
@@ -929,6 +932,16 @@ $XMWhite: #fff;
       background-image: url(public/images/desktop/Vector-4.png);
     }
   }
+
+  .heroSection {
+    h1 {
+      font-size: 28px;
+    }
+
+    .heroDescription {
+      font-size: 14px;
+    }
+  }
 }
 
 @media (max-width: 320px) {
@@ -945,6 +958,12 @@ $XMWhite: #fff;
   }
   .cryptosAndWhyTradeSection__WhyTradeSection {
     width: 280px;
+    h1 {
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 43px;
+      width: 210px;
+    }
   }
   .cryptosAndWhyTradeSection__grid {
     grid-gap: 25px;
@@ -1034,7 +1053,7 @@ $XMWhite: #fff;
 
         h1 {
           font-size: 35px;
-          line-height: 48.265px; /* 137.899% */
+          line-height: 48.265px;
           letter-spacing: -0.7px;
           margin-top: 22px;
           margin-bottom: 23px;
@@ -1060,14 +1079,14 @@ $XMWhite: #fff;
           justify-content: center;
           h1 {
             font-size: 19.773px;
-            line-height: 23.393px; /* 118.308% */
+            line-height: 23.393px;
             text-align: center;
           }
 
           p {
             text-align: center;
             font-size: 14px;
-            line-height: 19.748px; /* 141.055% */
+            line-height: 19.748px;
           }
         }
       }
@@ -1124,6 +1143,36 @@ $XMWhite: #fff;
       top: 650px;
       left: 300px;
       background-image: url(public/images/mobile/zero-mobile-bigger-tinted.png);
+    }
+  }
+
+  .heroSection {
+    &__content {
+      padding: 30px;
+    }
+
+    h1 {
+      display: flex;
+      width: 260px;
+      height: 145px;
+      flex-direction: column;
+      justify-content: center;
+
+      font-size: 28px;
+      line-height: 38px;
+    }
+
+    .openAcountbutton {
+      width: 290px;
+      height: 40px;
+    }
+
+    .termsConditions {
+      width: 244px;
+      height: 30px;
+      text-align: center;
+      line-height: 18px;
+      margin-bottom: 99px;
     }
   }
 }
