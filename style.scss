@@ -56,9 +56,6 @@ $XMWhite: #fff;
     list-style: none; /* Remove bullet points */
   }
 
-  &__item {
-  }
-
   &__link {
     text-decoration: none; /* Remove underline from links */
     font: inherit;
@@ -432,6 +429,25 @@ $XMWhite: #fff;
     }
   }
 }
+
+// Backround images
+.page {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(public/images/desktop/general-0-swaps-desktop.png); // Update with your image path
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+  }
+}
+
 .eventGallerySection {
   grid-row: 4 / 5;
   background-color: #f4f4f4;
